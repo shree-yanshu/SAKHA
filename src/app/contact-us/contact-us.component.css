@@ -2,6 +2,13 @@
     outline: none;
     margin: 0;
     padding: 0;
+    color: #fff;
+}
+
+body {
+    background-image: url('..\..\assets\layer1.png');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 h2 {
@@ -21,7 +28,7 @@ h2 {
 }
 
 #contact-details {
-    border-right: 3px solid #000;
+    border-right: 3px solid #fff;
     text-align: right;
 }
 
@@ -37,7 +44,7 @@ address, p {
 }
 
 a, a:visited {
-    color: #000;
+    color: #fff;
 }
 
 a:hover, a:active, a:focus {
@@ -51,23 +58,18 @@ input, textarea, button {
     padding: 0.5em;
     width: 100%;
     max-width: 500px;
-    border: 2px solid #000;
+    border: none;
     font-family: inherit;
 }
 
-input:hover, input:focus, textarea:hover, textarea:focus {
+input:hover, input:focus, textarea:hover, textarea:focus, button:focus, button:hover {
     background-color: #eee;
-    color: black;
 }
 
 button {
-    background-color: #000;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
     cursor: pointer;
-}
-
-button:focus, button:hover {
-    opacity: .8;
 }
 
 @media(max-width: 768px) {
@@ -92,6 +94,6 @@ button:focus, button:hover {
 
     #contact-details {
         border-right: none;
-        border-top: 3px solid #000;   
+        border-top: 3px solid #fff;   
     }
 }
