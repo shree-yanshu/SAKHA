@@ -1,0 +1,13 @@
+.header ul{
+    display: flex;
+    justify-content:space-between ;
+    list-style: none;
+    
+}
+.header ul li{
+    position:relative;
+}
+.header ul li img{
+    height:4vw;
+    width:auto;
+}
