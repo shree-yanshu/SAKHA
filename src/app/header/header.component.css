@@ -11,3 +11,9 @@
     height:4vw;
     width:auto;
 }
+a:link {
+    color:white;
+    background-color: transparent;
+    text-decoration: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
