@@ -1,0 +1,123 @@
+body {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    height:100vh;
+    position: relative;
+  }
+  
+.container .child {
+    scroll-snap-align: start;
+    position: relative;
+  }
+
+.body1
+{
+    height:100vh;
+    width: 100%;
+    margin-top: 8vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.651),rgba(117,101,101,0.3)),url(../../assets/Glow.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content:space-between;
+    background-attachment: fixed;
+    
+
+}
+
+.body1 .content-left
+{
+    z-index: 4;
+    float: left;
+    position:absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    width: 55%;
+    height: auto;
+    margin: 0 auto;
+    justify-content: center;
+    padding-left: 5vw;
+}
+.body1 .content-left h1{
+    
+    font-size: 3.5rem;
+    font:  Raleway;
+    font-weight:300;
+    margin-bottom: 1.5rem;
+    
+}
+.body1 .content-left h1
+{
+    width: 40%;
+}
+.body1 .content-left p{
+   
+    font-size: 1.2rem;
+    font: Didact Gothic;
+    font-weight:300;
+    line-height:25px;
+    padding-right: 16vw;
+    letter-spacing:2px;
+} 
+.body1 .content-left .button
+{
+    display: flex;
+    flex-wrap: wrap;
+    width:inherit;
+    align-items: center;
+    width: 90%;
+}
+.body1 .content-left .button a{
+    margin: 5px;
+}
+.body2
+{
+    height:91vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 1),rgba(75, 60, 60, 0)),url(../../assets/TransparentNoGlow.png);
+    background-position: center;
+    background-size: cover;
+
+}
+.module-border-wrap {
+    width:fit-content;
+    padding: 2px;
+    position: relative;
+    padding: 3px;
+    border-radius:20px;
+  }
+  
+  .module {
+    background: #222;
+    color: white;
+    padding: 5px;
+    border-radius:20px;
+  }
+  .body1 .content-left a
+  {
+      font-style: none;
+  }
+  .body1 .right-content 
+  {
+      height: 35%;
+      width:35%;
+      float:right ;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-80%);
+      margin-right: 6vw;   
+      right: 0px;
+      align-items: center;
+      
+  } 
+
+  .body1 .right-content img
+  {
+      width: 80%;
+      height: auto;
+      float: right;
+      
+      
+
+  }

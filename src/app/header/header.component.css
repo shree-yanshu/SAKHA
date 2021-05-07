@@ -2,9 +2,12 @@
     margin-top: 0%;
 }
 .header{
-    background-color:#1C1A1A;
+    background-color:rgba(28, 26, 26, 1);
     width:100vw;
-    height:8vh;
+    height:9vh;
+    top: 0;
+    z-index: 5;
+    position: fixed;
 }
 .header ul{
     display: flex;
@@ -14,9 +17,10 @@
 }
 .header ul li{
     position:relative;
+    
 }
 .header ul li img{
-    height:8vh;
+    height:9vh;
     width:auto;
 }
 a{
