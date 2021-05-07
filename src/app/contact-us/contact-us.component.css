@@ -26,7 +26,7 @@ body::before {
 }
 
 h2 {
-    margin: 1em 0;
+    margin: 2em 0 1em 0;
     text-align: center;
     font-size: 3rem;
     font-weight: 700;
@@ -136,16 +136,19 @@ button {
 }
 
 
-@media(max-width: 768px) {
+@media(max-width: 767px) {
     #content-wrapper {
         flex-direction: column;
         align-items: center;
     }
 
     #text-wrapper, #form-wrapper {
-        padding: 2em 0;
         width: 90%;
         text-align: center;
+    }
+
+    #text-wrapper {
+        margin-bottom: 4em;
     }
 
     input, textarea, button {
