@@ -1,17 +1,66 @@
-#main{
-    background-color: black;
-    height:100vh;
-    width:auto;
+*{
+    padding:0%;
+    margin:0%;
 }
 #pic{
-    height:90vh;
-    width:auto;
-    padding-left:27%;
+    height:100vh;
+    width:100vw;
 }
 #heading{
     font-size:xx-large;
     text-align: center;
-    margin-top:-30%;
-    padding-right:2%;
-    color:white
+    margin-top:-27%;
+    padding-bottom:16%;
+    padding-right: 5%;
+    font: normal 100px , Julius Sans One;
+}
+@media (max-width:1024px) {
+    #heading{
+        font-size:xx-large;
+        text-align: center;
+        margin-top:-65%;
+        padding-bottom:50%;
+        padding-right: 3%;
+        font: normal 100px , Julius Sans One;
+    }
+}
+@media (max-width:768px) {
+    #heading{
+        font-size:xx-large;
+        text-align: center;
+        margin-top:-65%;
+        padding-bottom:38%;
+        padding-right: 5%;
+        font: normal 100px , Julius Sans One;
+    }
+}
+@media (max-width:500px) {
+    #heading{
+        font-size:xx-large;
+        text-align: center;
+        margin-top:-85%;
+        padding-bottom:45%;
+        padding-right: 3%;
+        font: normal 100px , Julius Sans One;
+    }
+}
+@media (max-width:375px) {
+    #heading{
+        font-size:xx-large;
+        text-align: center;
+        margin-top:-85%;
+        padding-bottom:40%;
+        padding-right: 2%;
+        font: normal 100px , Julius Sans One;
+    }
+}
+@media (max-width:285px) {
+    #heading{
+        font-size:xx-large;
+        text-align: center;
+        margin-top:-100%;
+        padding-bottom:50%;
+        padding-right: 1%;
+        font: normal 100px , Julius Sans One;
+    }
 }
