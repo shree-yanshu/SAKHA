@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     HeaderComponent,
     FooterComponent,
     ContactUsComponent,
+    ComingSoonComponent,
   ],
   imports: [
     BrowserModule,
