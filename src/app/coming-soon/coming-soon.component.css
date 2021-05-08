@@ -2,65 +2,89 @@
     padding:0%;
     margin:0%;
 }
+body {
+    overflow-x: hidden;
+}
 #pic{
     height:100vh;
     width:100vw;
 }
 #heading{
-    font-size:xx-large;
+    font-size:150px ;
     text-align: center;
     margin-top:-27%;
     padding-bottom:16%;
     padding-right: 5%;
-    font: normal 100px , Julius Sans One;
+    font:Julius Sans One;
+    margin-bottom: 1.5rem;
+    
+}
+.button{
+    margin-left:42%;
+    margin-top:-10%;
+    margin-bottom: 12%;
+}
+.module-border-wrap {
+    width:max-content;
+    padding: 2px;
+    position: relative;
+    padding: 3px;
+    border-radius:10px;
+}
+      
+.module {
+    background: #222;
+    color: white;
+    padding: 5px;
+    border-radius:10px;
 }
 @media (max-width:1024px) {
     #heading{
-        font-size:xx-large;
+        font-size:150px ;
         text-align: center;
         margin-top:-65%;
         padding-bottom:50%;
         padding-right: 3%;
-        font: normal 100px , Julius Sans One;
+        font:Julius Sans One;
     }
 }
 @media (max-width:768px) {
     #heading{
-        font-size:xx-large;
+        font-size:150px ;
         text-align: center;
         margin-top:-65%;
         padding-bottom:38%;
         padding-right: 5%;
-        font: normal 100px , Julius Sans One;
+        font:Julius Sans One;
     }
 }
 @media (max-width:500px) {
     #heading{
-        font-size:xx-large;
+        font-size:150px ;
         text-align: center;
         margin-top:-85%;
         padding-bottom:45%;
         padding-right: 3%;
-        font: normal 100px , Julius Sans One;
+        font:Julius Sans One;
     }
 }
 @media (max-width:375px) {
     #heading{
-        font-size:xx-large;
+        font-size:150px ;
         text-align: center;
         margin-top:-85%;
         padding-bottom:40%;
         padding-right: 2%;
-        font: normal 100px , Julius Sans One;
+        font:Julius Sans One;
     }
 }
 @media (max-width:285px) {
     #heading{
-        font-size:xx-large;
+        font-size:150px ;
         text-align: center;
         margin-top:-100%;
         padding-bottom:50%;
         padding-right: 1%;
-        font: normal 100px , Julius Sans One;
+        font:Julius Sans One;
     }
 }
