@@ -162,4 +162,8 @@ button {
         border-right: none;
         border-top: 3px solid #fff;   
     }
+
+    #submitted {
+        width: 95%;
+    }
 }
