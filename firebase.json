@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "sakhavaccine",
+    "public": "dist/untitled",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

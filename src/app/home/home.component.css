@@ -324,6 +324,10 @@ input, select {
   box-sizing: border-box;
 }
 
+::placeholder {
+  color: black;
+}
+
 .error {
     border-color: red;
     color: red;
