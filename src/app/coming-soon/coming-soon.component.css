@@ -20,23 +20,26 @@ body {
     
 }
 .button{
-    margin-left:42%;
+    margin-left:32%;
     margin-top:-10%;
     margin-bottom: 12%;
 }
 .module-border-wrap {
-    width:max-content;
-    padding: 2px;
+    width:100px;
+    height:auto;
     position: relative;
     padding: 3px;
     border-radius:10px;
+    border:2px solid black;
 }
       
 .module {
-    background: #222;
+    width:100px;
+    height:auto;
     color: white;
     padding: 5px;
     border-radius:10px;
+
 }
 @media (max-width:1024px) {
     #heading{
