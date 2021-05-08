@@ -69,7 +69,7 @@ body {
 /* BODY 2 CSS */
 
 .body2 {
-  height: 100vh;
+  height: 91vh;
   width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 1), rgba(75, 60, 60, 0)),
     url(../../assets/TransparentNoGlow.png);
@@ -80,7 +80,7 @@ body {
 .body2 .content {
   margin: 0 auto;
   position: absolute;
-  top: 55%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%) !important;
   /* padding-left:6rem;
@@ -96,6 +96,7 @@ body {
   text-align: center;
   width: 100%;
   color: white;
+  font-size:medium;
  
 }
 
@@ -261,7 +262,7 @@ span p {
 }
 
 .container2 .formbox {
-  padding: 0 3% 0% 3%;
+  padding: 0 2% 0% 2%;
 }
 
 .container2 .formbox h3
@@ -276,18 +277,18 @@ span p {
     margin: 0 auto;
     text-decoration: none;
     font-size: large;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
+    margin-top:.5rem;
 }
 
 .container2 .formbox .wrapbox {
   display: flex;
   justify-content: space-between;
+  margin-top: 0.1rem;
 }
 
 .container2 .formbox .module-border-wrap {
   align-items: center;
-  margin: 5px auto;
+  margin: 2px auto;
 }
 
 .container2 .formbox .module-border-wrap .module {
@@ -320,7 +321,7 @@ span p {
   padding: 10px 20px;
   border: none;
   outline: none;
-  margin: 10px 0px;
+  margin: 5px 0px;
   text-align: center;
   background: rgba(201, 176, 176, 0.801);
   border-radius: 5px;
