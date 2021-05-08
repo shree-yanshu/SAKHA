@@ -11,7 +11,7 @@ export class ContactUsComponent implements OnInit {
 
   form: FormGroup;
 
-  name: FormControl = new FormControl("", [Validators.required]);
+  name: FormControl = new FormControl("", [Validators.required, Validators.pattern('[a-zA-Z ]*')]);
   email: FormControl = new FormControl("", [Validators.required, Validators.email]);
   subject: FormControl = new FormControl("", [Validators.required]);
   message: FormControl = new FormControl("", [Validators.required]);
@@ -58,34 +58,39 @@ export class ContactUsComponent implements OnInit {
   onSubmit() {
     if (this.form.status == "VALID") {
       this.form.disable(); // disable the form if it's valid to disable multiple submissions
+      this.modal = false; // hide the modal on multiple submits
+  
       var formData: any = new FormData();
       formData.append("name", this.form.get("name").value);
       formData.append("email", this.form.get("email").value);
       formData.append("subject", this.form.get("subject").value);
       formData.append("message", this.form.get("message").value);
+      
       this.isLoading = true; // sending the post request async so it's in progress
-      this.modal = false; // hide the modal on multiple submits
-      this.http.post("https://script.google.com/macros/s/AKfycbw5uBkchmmcoD4jH-1o0OqjOEFwsKUp186PFKLnitzPfJ2dDZvE/exec", formData).subscribe(
+      
+      this.http.post("https://script.google.com/macros/s/AKfycbxZWoUDKJo3zoIR5-bRJ2QKNghAyhobYE4-LbEAP4dqGHovkOfiiSaLWuH3wME3SEKg/exec", formData).subscribe(
         (response) => {
           // choose the response message
           if (response["result"] == "success") {
             this.success = true;
-          } else {
+          }
+          else {
             this.success = false;
           }
-          this.form.enable(); // re enable the form after a success
-          this.modal = true; // show the response message
-          this.isLoading = false; // re enable the submit button
           console.log(response);
         },
         (error) => {
           this.success = false;
-          this.form.enable(); // re enable the form after a success
-          this.modal = true; // show the response message
-          this.isLoading = false; // re enable the submit button
           console.log(error);
         }
       );
+      
+      this.isLoading = false; // re enable the submit button
+      this.modal = true; // show the response message
+      
+      this.form.reset();
+      
+      this.form.enable(); // re enable the form after submission
     }
   }
 }

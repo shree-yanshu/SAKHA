@@ -157,80 +157,84 @@
               
               <div class="wrapbox">
                 <input
-                  class="field"
+                  (blur) = "onBlurOrChange($event)"
                   [formControl]="fname"
                   placeholder="First Name"
                   type="text"
                   name="fname"
                   tabindex="1"
                   required
-                  autofocus
+                  
                 /><input
-                  class="field"
+                  (blur) = "onBlurOrChange($event)"
                   [formControl]="lname"
                   placeholder="Last Name"
                   type="text"
                   name="lname"
                   tabindex="1"
                   required
-                  autofocus
+                  
                 />
               </div>
               <div class="wrapbox">
                 <input
-                  class="field"
+                  (blur) = "onBlurOrChange($event)"
                   [formControl]="contact"
                   name="contact"
                   placeholder="Contact No."
                   tabindex="1"
                   required
-                  autofocus
+                  
                 /><input
-                  class="field"
+                  (blur) = "onBlurOrChange($event)"
                   [formControl]="email"
                   placeholder="Email"
                   type="email"
                   name="email"
                   tabindex="1"
                   required
-                  autofocus
+                  
                 />
               </div>
               <div class="wrapbox">
-                <select class="field" (change)="populateCity($event.target.value)" [(ngModel)]="selectedState" >
-                  <option value="" selected>Select State</option>
-                  <option *ngFor="let s of State" [value]="s.id">{{s.name}}</option>
+                <select [formControl]="state" name="state" (blur)="onBlurOrChange($event)" (change)="populateCity($event, $event.target.value)">
+                  <option value="invalid" selected>Select State</option>
+                  <option *ngFor="let s of State" [value]="s">{{s}}</option>
                 </select>
-                <select class="field" [(ngModel)]="selectedCity">
-                  <option value="">Select City</option>
-                  <option *ngFor="let c of dropdownCity" [value]="c.id">{{c.name}}</option>
+                <select [formControl]="city" name="city" (blur)="onBlurOrChange($event)" (change) = "onBlurOrChange($event)">
+                  <option value="invalid">Select City</option>
+                  <option *ngFor="let c of dropdownCity" [value]="c">{{c}}</option>
                 </select>
                 
               </div>
 
               <div class="wrapbox">
                 <input
-                  class="field"
-                  placeholder="Pincode"
+                  name = "pincode"
+                  [formControl] = "pincode"
+                  (blur) = "onBlurOrChange($event)"
+                  placeholder="Pincode (Optional)"
                   type="text"
                   tabindex="1"
-                  autofocus
+                  
                 /><input
-                  class="field"
-                  placeholder="Locality"
+                  name = "locality"
+                  [formControl] = "locality"
+                  (blur) = "onBlurOrChange($event)"
+                  placeholder="Locality (Optional)"
                   type="text"
                   tabindex="1"
-                  autofocus
+                  
                 />
               </div>
-              <button class="submitbutton" [disabled]="isLoading && !form.valid" [ngClass]="isLoading || !form.valid ? 'disabled' : ''"  href="http://"> SUBMIT</button>
+              <button class="submitbutton" [disabled]="isLoading && !form.valid" [ngClass]="isLoading || !form.valid ? 'disabled' : ''">SUBMIT</button>
             </form>
           </div>
         </div>
       </section>
       <div class="modal" style="display:{{modal ? 'block' : 'none'}};" (click)="modal=false">
         <div id="submitted" (click)="$event.stopPropagation()">
-            <h3 *ngIf="success">Message received!</h3>
+            <h3 *ngIf="success">Response received!</h3>
             <p *ngIf="success">We will surely get back to you.</p>
             <h3 *ngIf="!success">Oops... An error occured</h3>
             <p *ngIf="!success">Please try again in some while.</p>

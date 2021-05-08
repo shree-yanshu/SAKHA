@@ -295,12 +295,7 @@ span p {
   font-size: larger;
 }
 
-::placeholder
-{
-    color: black;
-}
-
-.container2 .formbox .submitbutton {
+button {
   align-items: center;
   border: 3px solid black;
   background: linear-gradient(to right, rgb(161, 161, 236), blue);
@@ -313,23 +308,22 @@ span p {
   text-decoration: none;
   font-size: large;
   margin-bottom: 0.5rem;
+  cursor: pointer;
 }
 
-.container2 .formbox .wrapbox .field {
-  width: 40%;
+input, select {
+  width: 45%;
   padding: 10px 20px;
   border: none;
   outline: none;
-  margin: 5px 0px;
-  text-align: center;
+  margin: 5px;
   background: rgba(201, 176, 176, 0.801);
   border-radius: 5px;
   z-index: 1;
   border: 3px solid black;
+  box-sizing: border-box;
 }
 
-
-/* modal css */
 .error {
     border-color: red;
     color: red;
@@ -339,15 +333,13 @@ span p {
     color: red;
 }
 
+select.error {
+  color: black;
+}
 
 .disabled {
     opacity: .7;
     cursor: not-allowed;
-}
-
-.disabled:hover {
-    box-shadow: none;
-    opacity: .7; /* same as .disabled */
 }
 
 .modal {
@@ -369,6 +361,10 @@ span p {
     flex-direction: column;
     justify-content: space-evenly;
     margin: 10% auto;
+}
+
+#submitted h3 {
+  font-size: 2rem;
 }
 
 #submitted h3, #submitted p, #submitted button {
