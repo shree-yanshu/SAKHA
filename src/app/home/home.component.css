@@ -298,7 +298,6 @@ span p {
 ::placeholder
 {
     color: black;
-    z-index: 4;
 }
 
 .container2 .formbox .submitbutton {
@@ -327,4 +326,56 @@ span p {
   border-radius: 5px;
   z-index: 1;
   border: 3px solid black;
+}
+
+
+/* modal css */
+.error {
+    border-color: red;
+    color: red;
+}
+
+.error::placeholder {
+    color: red;
+}
+
+
+.disabled {
+    opacity: .7;
+    cursor: not-allowed;
+}
+
+.disabled:hover {
+    box-shadow: none;
+    opacity: .7; /* same as .disabled */
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 5;
+}
+
+#submitted {
+    background-color: #fff;
+    color: #000;
+    width: 50%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10% auto;
+}
+
+#submitted h3, #submitted p, #submitted button {
+    margin: 0 auto;
+    width: fit-content;   
+}
+
+#submitted p {
+    color: #000;
 }

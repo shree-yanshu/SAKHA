@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],
