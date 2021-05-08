@@ -1,250 +1,329 @@
 body {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    overflow-x:hidden;
-    scroll-behavior: smooth;
-    height:100vh;
-    position: relative;
-  }
-  
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  height: 100vh;
+  position: relative;
+}
+
 .container .child {
-    scroll-snap-align: start;
-    position: relative;
-  }
-
-.body1
-{
-    height:100vh;
-    width: 100%;
-    margin-top: 8vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.651),rgba(117,101,101,0.3)),url(../../assets/Glow.png);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content:space-between;
-    background-attachment: fixed;
-    
-
+  scroll-snap-align: start;
+  position: relative;
 }
 
-.body1 .content-left
-{
-    z-index: 4;
-    float: left;
-    position:absolute;
-    top: 55%;
-    transform: translateY(-50%);
-    width: 55%;
-    height: auto;
-    margin: 0 auto;
-    justify-content: center;
-    padding-left: 5vw;
+.body1 {
+  height: 100vh;
+  width: 100%;
+  margin-top: 8vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.651), rgba(117, 101, 101, 0.3)),
+    url(../../assets/Glow.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  background-attachment: fixed;
 }
-.body1 .content-left h1{
-    
-    font-size: 3.5rem;
-    font:  Raleway;
-    font-weight:300;
-    margin-bottom: 1.5rem;
-    
+
+.body1 .content-left {
+  z-index: 4;
+  float: left;
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  width: 55%;
+  height: auto;
+  margin: 0 auto;
+  justify-content: center;
+  padding-left: 5vw;
 }
-.body1 .content-left h1
-{
-    width: 40%;
+.body1 .content-left h1 {
+  font-size: 3.5rem;
+  font: Raleway;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
 }
-.body1 .content-left p{
-   
-    font-size: 1.2rem;
-    font: Didact Gothic;
-    font-weight:300;
-    line-height:25px;
-    padding-right: 23vw;
-    letter-spacing:2px;
-} 
-.body1 .content-left .button
-{
-    display: flex;
-    flex-wrap: wrap;
-    width:inherit;
-    align-items: center;
-    width: 90%;
+.body1 .content-left h1 {
+  width: 40%;
 }
-.body1 .content-left .button a{
-    margin: 5px;
-    padding: 5px;
+.body1 .content-left p {
+  font-size: 1.2rem;
+  font: Didact Gothic;
+  font-weight: 300;
+  line-height: 25px;
+  padding-right: 23vw;
+  letter-spacing: 2px;
+}
+.body1 .content-left .button {
+  display: flex;
+  flex-wrap: wrap;
+  width: inherit;
+  align-items: center;
+  width: 90%;
+}
+.body1 .content-left .button a {
+  margin: 5px;
+  padding: 5px;
 }
 
 /* BODY 2 CSS */
 
-.body2
-{
-    height:91vh;
-    width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 1),rgba(75, 60, 60, 0)),url(../../assets/TransparentNoGlow.png);
-    background-position: center;
-    background-size: cover;
-
+.body2 {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(75, 60, 60, 0)),
+    url(../../assets/TransparentNoGlow.png);
+  background-position: center;
+  background-size: cover;
 }
 
-
-
+.body2 .content {
+  margin: 0 auto;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  /* padding-left:6rem;
+    padding-right: 6rem; */
+}
+.body2 .content h2 {
+  text-align: center;
+  color:white;
+  font-size: 2rem;
+  font-weight:bold;
+}
+.body2 .content p {
+  text-align: center;
+  width: 100%;
+  color: white;
+ 
+}
 
 /* End of Body 2 CSS */
 .module-border-wrap {
-    width:fit-content;
-    padding: 2px;
-    position: relative;
-    padding: 3px;
-    border-radius:20px;
-  }
-  
-  .module {
-    background: rgba(2, 2, 2, 0.911);
-    color: rgb(245, 245, 245);
-    padding: 8px;
-    border-radius:20px;
-  }
-  .body1 .content-left a
-  {
-      text-decoration: none;
-      font-size:large;
+  width: fit-content;
+  padding: 2px;
+  position: relative;
+  padding: 3px;
+  border-radius: 20px;
+}
 
-  }
-  .body1 .right-content 
-  {
-      height: 35%;
-      width:35%;
-      float:right ;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-80%);
-      margin-right: 6vw;   
-      right: 0px;
-      align-items: center;
-      
-  } 
+.module {
+  background: rgba(2, 2, 2, 0.911);
+  color: rgb(245, 245, 245);
+  padding: 8px;
+  border-radius: 20px;
+}
+.body1 .content-left a {
+  text-decoration: none;
+  font-size: large;
+}
+.body1 .right-content {
+  height: 35%;
+  width: 35%;
+  float: right;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-80%);
+  margin-right: 6vw;
+  right: 0px;
+  align-items: center;
+}
 
-  .body1 .right-content img
-  {
-      width: 80%;
-      height: auto;
-      float: right;
-      
-      
+.body1 .right-content img {
+  width: 80%;
+  height: auto;
+  float: right;
+}
 
+/* Scroll me css */
+span p {
+  margin-left: -55px;
+}
+@-webkit-keyframes ani-mouse {
+  0% {
+    opacity: 1;
+    top: 29%;
   }
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 29%;
+  }
+}
+@-moz-keyframes ani-mouse {
+  0% {
+    opacity: 1;
+    top: 29%;
+  }
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 29%;
+  }
+}
+@keyframes ani-mouse {
+  0% {
+    opacity: 1;
+    top: 29%;
+  }
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 29%;
+  }
+}
+.scroll-btn {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  bottom: 1rem;
+}
+.scroll-btn > * {
+  display: inline-block;
+  line-height: 18px;
+  font-size: 13px;
+  font-weight: normal;
+  color: #7f8c8d;
+  color: #ffffff;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 2px;
+}
+.scroll-btn > *:hover,
+.scroll-btn > *:focus,
+.scroll-btn > *.active {
+  color: #ffffff;
+}
+.scroll-btn > *:hover,
+.scroll-btn > *:focus,
+.scroll-btn > *:active,
+.scroll-btn > *.active {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.scroll-btn .mouse {
+  position: relative;
+  display: block;
+  width: 35px;
+  height: 55px;
+  margin: 0 auto 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 3px solid white;
+  border-radius: 23px;
+}
+.scroll-btn .mouse > * {
+  position: absolute;
+  display: block;
+  top: 29%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  background: white;
+  border-radius: 50%;
+  -webkit-animation: ani-mouse 2.5s linear infinite;
+  -moz-animation: ani-mouse 2.5s linear infinite;
+  animation: ani-mouse 2.5s linear infinite;
+}
+/* Form CSS */
 
-  /* Scroll me css */
-  span p {
-    margin-left: -55px;
-  }
-  @-webkit-keyframes ani-mouse {
-      0% {
-      opacity: 1;
-      top: 29%;
-      }
-      15% {
-      opacity: 1;
-      top: 50%;
-      }
-      50% {
-      opacity: 0;
-      top: 50%;
-      }
-      100% {
-      opacity: 0;
-      top: 29%;
-      }
-  }
-  @-moz-keyframes ani-mouse {
-      0% {
-      opacity: 1;
-      top: 29%;
-      }
-      15% {
-      opacity: 1;
-      top: 50%;
-      }
-      50% {
-      opacity: 0;
-      top: 50%;
-      }
-      100% {
-      opacity: 0;
-      top: 29%;
-      }
-  }
-  @keyframes ani-mouse {
-      0% {
-      opacity: 1;
-      top: 29%;
-      }
-      15% {
-      opacity: 1;
-      top: 50%;
-      }
-      50% {
-      opacity: 0;
-      top: 50%;
-      }
-      100% {
-      opacity: 0;
-      top: 29%;
-      }
-  }
-   .scroll-btn {
-      display: block;
-      position: absolute;
-      left: 0;
-      right: 0;
-      text-align: center;
-      bottom: 1rem;
-  }
-  .scroll-btn > * {
-      display: inline-block;
-      line-height: 18px;
-      font-size: 13px;
-      font-weight: normal;
-      color: #7f8c8d;
-      color: #ffffff;
-      font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      letter-spacing: 2px;
-  }
-  .scroll-btn > *:hover,
-  .scroll-btn > *:focus,
-  .scroll-btn > *.active {
-      color: #ffffff;
-  }
-  .scroll-btn > *:hover,
-  .scroll-btn > *:focus,
-  .scroll-btn > *:active,
-  .scroll-btn > *.active {
-      opacity: 0.8;
-      filter: alpha(opacity=80);
-  }
-  .scroll-btn .mouse {
-      position: relative;
-      display: block;
-      width: 35px;
-      height: 55px;
-      margin: 0 auto 20px;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      border: 3px solid white;
-      border-radius: 23px;
-  }
-  .scroll-btn .mouse > * {
-      position: absolute;
-      display: block;
-      top: 29%;
-      left: 50%;
-      width: 8px;
-      height: 8px;
-      margin: -4px 0 0 -4px;
-      background: white;
-      border-radius: 50%;
-      -webkit-animation: ani-mouse 2.5s linear infinite;
-      -moz-animation: ani-mouse 2.5s linear infinite;
-      animation: ani-mouse 2.5s linear infinite;
-  }
+.container2 {
+  border: 2px solid black;
+  border-radius: 8px;
+  width: 100%;
+  background: rgba(201, 176, 176, 0.514);
+  height: fit-content;
+}
+
+.container2 .formbox {
+  padding: 0 3% 0% 3%;
+}
+
+.container2 .formbox h3
+{
+    border: 2px solid rgb(9, 234, 250);
+    align-items: center;
+    color: white;
+    width: fit-content;
+    padding:  0.2rem 0.5rem 0.2rem 0.5rem; 
+    display: flex;
+    border-radius: 1.5rem;
+    margin: 0 auto;
+    text-decoration: none;
+    font-size: large;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.container2 .formbox .wrapbox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container2 .formbox .module-border-wrap {
+  align-items: center;
+  margin: 5px auto;
+}
+
+.container2 .formbox .module-border-wrap .module {
+  font-size: larger;
+}
+
+::placeholder
+{
+    color: black;
+    z-index: 4;
+}
+
+.container2 .formbox .submitbutton {
+  align-items: center;
+  border: 3px solid black;
+  background: linear-gradient(to right, rgb(161, 161, 236), blue);
+  color: white;
+  width: fit-content;
+  padding: 0.5rem;
+  display: flex;
+  border-radius: 1.5rem;
+  margin: 0 auto;
+  text-decoration: none;
+  font-size: large;
+  margin-bottom: 0.5rem;
+}
+
+.container2 .formbox .wrapbox .field {
+  width: 40%;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  margin: 10px 0px;
+  text-align: center;
+  background: rgba(201, 176, 176, 0.801);
+  border-radius: 5px;
+  z-index: 1;
+  border: 3px solid black;
+}
