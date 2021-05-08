@@ -182,7 +182,6 @@
                   [formControl]="contact"
                   name="contact"
                   placeholder="Contact No."
-                  type="number"
                   tabindex="1"
                   required
                   autofocus
@@ -199,7 +198,7 @@
               </div>
               <div class="wrapbox">
                 <select class="field" (change)="populateCity($event.target.value)" [(ngModel)]="selectedState" >
-                  <option  selected>Select State</option>
+                  <option value="" selected>Select State</option>
                   <option *ngFor="let s of State" [value]="s.id">{{s.name}}</option>
                 </select>
                 <select class="field" [(ngModel)]="selectedCity">
