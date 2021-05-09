@@ -35,15 +35,15 @@ a{
   @media (max-width:1000px) {
       .header{
           background-color:#1C1A1A;
-          width:175vw;
-          height:8vh;
+          width:173vw;
+          height:9vh;
       }
       .header ul li img{
-          height:8vh;
+          height:9vh;
           width:auto;
       }
       .header ul li{
-          margin-left:10vw;
+          margin-left:9vw;
           position:relative;
       }
       #link{
@@ -53,7 +53,7 @@ a{
     @media (max-width:550px) {
       .header{
           background-color:#1C1A1A;
-          width:175vw;
+          width:173vw;
           height:10vh;
       }
       .header ul li img{
@@ -71,7 +71,7 @@ a{
     @media (max-width:375px) {
       .header{
           background-color:#1C1A1A;
-          width:200vw;
+          width:175vw;
           height:12vh;
       }
       .header ul li img{
@@ -79,7 +79,7 @@ a{
           width:auto;
       }
       .header ul li{
-          margin-left:6vw;
+          margin-left:5vw;
           position:relative;
       }
       #link{
@@ -97,7 +97,7 @@ a{
           width:auto;
       }
       .header ul li{
-          margin-left:6vw;
+          margin-left:5vw;
           position:relative;
       }
       #link{
