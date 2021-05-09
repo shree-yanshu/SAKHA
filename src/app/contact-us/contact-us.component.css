@@ -143,16 +143,18 @@ button {
     #content-wrapper {
         flex-direction: column;
         align-items: center;
-    }
-
-    #text-wrapper, #form-wrapper {
-        width: 90%;
         text-align: center;
     }
-
+    
     #text-wrapper {
+        width: 80%;
         margin-bottom: 4em;
     }
+    
+    #form-wrapper {
+        width: 90%;
+    }
+
 
     input, textarea, button {
         max-width: none;
