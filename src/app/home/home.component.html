@@ -164,8 +164,8 @@
                   name="fname"
                   tabindex="1"
                   required
-                  
-                /><input
+                  />
+                <!--<input
                   (blur) = "onBlurOrChange($event)"
                   [formControl]="age"
                   placeholder="age"
@@ -174,7 +174,12 @@
                   tabindex="1"
                   required
                   
-                />
+                /> -->
+                <select [formControl]="age" name="age" required tabindex="1"  (blur)="onBlurOrChange($event)">
+                  <option value="" selected>Select Age</option>
+                  <option>Below 18</option>
+                  <option>Above 45</option>
+                </select>
               </div>
               <div class="wrapbox">
                 <input
@@ -197,12 +202,12 @@
                 />
               </div>
               <div class="wrapbox">
-                <select [formControl]="state" name="state" (blur)="onBlurOrChange($event)" [(ngModel)]="selectedState" (change)="populateCity($event, $event.target.value)">
-                  <option value="invalid" selected>Select State</option>
+                <select [formControl]="state" name="state" required (blur)="onBlurOrChange($event)" [(ngModel)]="selectedState" (change)="populateCity($event, $event.target.value)">
+                  <option value="" selected>Select State</option>
                   <option *ngFor="let s of State" [value]="s.id">{{s.name}}</option>
                 </select>
                 <select [formControl]="city" name="city" (blur)="onBlurOrChange($event)"[(ngModel)]="selectedCity" (change) = "onBlurOrChange($event)">
-                  <option value="invalid">Select City</option>
+                  <option value="" selected>Select City</option>
                   <option *ngFor="let c of dropdownCity" [value]="c.id">{{c.name}}</option>
                 </select>
               </div>
