@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   form: FormGroup;
 
   fname: FormControl = new FormControl("", [Validators.required, Validators.pattern('[a-zA-Z ]*')]);
-  lname: FormControl = new FormControl("", [Validators.required, Validators.pattern('[a-zA-Z ]*')]);
+  age: FormControl = new FormControl("", [Validators.required]);
   email: FormControl = new FormControl("", [Validators.required, Validators.email]);
   contact: FormControl = new FormControl("", [Validators.required, Validators.pattern("^[0-9_-]{10,12}")]);
   state: FormControl = new FormControl("invalid");
@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
   constructor(private formbuilder: FormBuilder, private http: HttpClient) {
     this.form = this.formbuilder.group({
       fname: this.fname,
-      lname: this.lname,
+      age: this.age,
       email: this.email,
       contact: this.contact,
       state: this.state,
@@ -49,8 +49,8 @@ export class HomeComponent implements OnInit {
       case 'fname':
         invalid = this.fname.invalid;
         break;
-      case 'lname':
-        invalid = this.lname.invalid;
+      case 'age':
+        invalid = this.age.invalid;
         break;
       case 'email':
         invalid = this.email.invalid;
@@ -76,7 +76,7 @@ export class HomeComponent implements OnInit {
 
       var formData: any = new FormData();
       formData.append("fname", this.form.get("fname").value);
-      formData.append("lname", this.form.get("lname").value);
+      formData.append("age", this.form.get("age").value);
       formData.append("contact", this.form.get("contact").value);
       formData.append("email", this.form.get("email").value);
       formData.append("state", this.form.get("state").value);
@@ -192,11 +192,12 @@ export class HomeComponent implements OnInit {
 ["Karaikal", "Mahe", "Puducherry", "Yanam"], 
 
 ];
-
+selectedState : any = "";
+selectedCity : any = "";
 dropdownCity: any = [];
 
 populateCity(e : Event, value) {
-  this.dropdownCity = this.City[this.State.indexOf(value)];
+  this.dropdownCity = this.City.filter(i => i.state == value);
   this.onBlurOrChange(e);
 }
 }
