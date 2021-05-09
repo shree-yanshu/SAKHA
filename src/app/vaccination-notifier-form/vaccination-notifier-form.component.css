@@ -1,0 +1,91 @@
+.container {
+    border: 2px solid black;
+    border-radius: 8px;
+    width: 100%;
+    background: rgba(201, 176, 176, 0.514);
+    height: fit-content;
+}
+
+.formbox {
+    padding: 0 2% 0% 2%;
+}
+  
+.formbox h3 {
+      border: 2px solid rgb(9, 234, 250);
+      align-items: center;
+      color: white;
+      width: fit-content;
+      padding:  0.2rem 0.5rem 0.2rem 0.5rem; 
+      display: flex;
+      border-radius: 1.5rem;
+      margin: 0 auto;
+      text-decoration: none;
+      font-size: large;
+      margin-top:.5rem;
+}
+  
+.formbox .wrapbox {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.1rem;
+}
+  
+.formbox .module-border-wrap {
+    align-items: center;
+    margin: 2px auto;
+}
+  
+.formbox .module-border-wrap .module {
+    font-size: larger;
+}
+
+button {
+    align-items: center;
+    border: 3px solid black;
+    background: linear-gradient(to right, rgb(161, 161, 236), blue);
+    color: white;
+    width: fit-content;
+    padding: 0.5rem;
+    display: flex;
+    border-radius: 1.5rem;
+    margin: 0 auto;
+    text-decoration: none;
+    font-size: large;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+  }
+  
+input, select {
+    width: 45%;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    margin: 5px;
+    background: rgba(201, 176, 176, 0.801);
+    border-radius: 5px;
+    z-index: 1;
+    border: 3px solid black;
+    box-sizing: border-box;
+}
+  
+::placeholder {
+    color: black;
+}
+  
+.error {
+    border-color: red;
+    color: red;
+}
+  
+.error::placeholder {
+    color: red;
+}
+  
+select.error {
+    color: black;
+}
+  
+.disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}

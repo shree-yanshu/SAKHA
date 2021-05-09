@@ -251,48 +251,39 @@ span p {
   -moz-animation: ani-mouse 2.5s linear infinite;
   animation: ani-mouse 2.5s linear infinite;
 }
-/* Form CSS */
 
-.container2 {
-  border: 2px solid black;
-  border-radius: 8px;
+.modal {
   width: 100%;
-  background: rgba(201, 176, 176, 0.514);
-  height: fit-content;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 5;
 }
 
-.container2 .formbox {
-  padding: 0 2% 0% 2%;
-}
-
-.container2 .formbox h3
-{
-    border: 2px solid rgb(9, 234, 250);
-    align-items: center;
-    color: white;
-    width: fit-content;
-    padding:  0.2rem 0.5rem 0.2rem 0.5rem; 
-    display: flex;
-    border-radius: 1.5rem;
-    margin: 0 auto;
-    text-decoration: none;
-    font-size: large;
-    margin-top:.5rem;
-}
-
-.container2 .formbox .wrapbox {
+#submitted {
+  background-color: #fff;
+  color: #000;
+  width: 50%;
+  height: 30%;
   display: flex;
-  justify-content: space-between;
-  margin-top: 0.1rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 10% auto;
 }
 
-.container2 .formbox .module-border-wrap {
-  align-items: center;
-  margin: 2px auto;
+#submitted h3 {
+  font-size: 2rem;
 }
 
-.container2 .formbox .module-border-wrap .module {
-  font-size: larger;
+#submitted h3, #submitted p, #submitted button {
+  margin: 0 auto;
+  width: fit-content;   
+}
+
+#submitted p {
+  color: #000;
 }
 
 button {
@@ -309,73 +300,4 @@ button {
   font-size: large;
   margin-bottom: 0.5rem;
   cursor: pointer;
-}
-
-input, select {
-  width: 45%;
-  padding: 10px 20px;
-  border: none;
-  outline: none;
-  margin: 5px;
-  background: rgba(201, 176, 176, 0.801);
-  border-radius: 5px;
-  z-index: 1;
-  border: 3px solid black;
-  box-sizing: border-box;
-}
-
-::placeholder {
-  color: black;
-}
-
-.error {
-    border-color: red;
-    color: red;
-}
-
-.error::placeholder {
-    color: red;
-}
-
-select.error {
-  color: black;
-}
-
-.disabled {
-    opacity: .7;
-    cursor: not-allowed;
-}
-
-.modal {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.7);
-    z-index: 5;
-}
-
-#submitted {
-    background-color: #fff;
-    color: #000;
-    width: 50%;
-    height: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin: 10% auto;
-}
-
-#submitted h3 {
-  font-size: 2rem;
-}
-
-#submitted h3, #submitted p, #submitted button {
-    margin: 0 auto;
-    width: fit-content;   
-}
-
-#submitted p {
-    color: #000;
 }

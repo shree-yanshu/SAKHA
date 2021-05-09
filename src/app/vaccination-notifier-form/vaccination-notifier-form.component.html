@@ -1,0 +1,41 @@
+<div class="container">
+    <form [formGroup]="form" method="post" (ngSubmit)="onSubmit()" class="formbox" action="" method="post">
+        <h3>Vaccination Notifier</h3>
+
+        <div class="wrapbox">
+            <input (blur)="onBlurOrChange($event)" [formControl]="name" placeholder="Name" type="text" name="name"
+                tabindex="1" required />
+            <select [formControl]="age" name="age" required tabindex="1" (blur)="onBlurOrChange($event)">
+                <option value="" selected>Select Age</option>
+                <option [value]="0">Above 18 & Below 45</option>
+                <option [value]="1">Above 45</option>
+            </select>
+        </div>
+        <div class="wrapbox">
+            <input (blur)="onBlurOrChange($event)" [formControl]="contact" name="contact" placeholder="Contact No."
+                tabindex="1" required /><input (blur)="onBlurOrChange($event)" [formControl]="email" placeholder="Email"
+                type="email" name="email" tabindex="1" required />
+        </div>
+        <div class="wrapbox">
+            <select [formControl]="state" name="state" required (blur)="onBlurOrChange($event)"
+                [(ngModel)]="selectedState" (change)="populateCity($event, $event.target.value)">
+                <option value="" selected>Select State</option>
+                <option *ngFor="let s of State" [value]="s.id">{{s.name}}</option>
+            </select>
+            <select [formControl]="city" name="city" (blur)="onBlurOrChange($event)" [(ngModel)]="selectedCity"
+                (change)="onBlurOrChange($event)">
+                <option value="" selected>Select City</option>
+                <option *ngFor="let c of dropdownCity" [value]="c.id">{{c.name}}</option>
+            </select>
+        </div>
+
+        <div class="wrapbox">
+            <input name="pincode" [formControl]="pincode" (blur)="onBlurOrChange($event)"
+                placeholder="Pincode (Optional)" type="text" tabindex="1" /><input name="locality"
+                [formControl]="locality" (blur)="onBlurOrChange($event)" placeholder="Locality (Optional)" type="text"
+                tabindex="1" />
+        </div>
+        <button class="submitbutton" [disabled]="isLoading || !form.valid"
+            [ngClass]="isLoading || !form.valid ? 'disabled' : ''">SUBMIT</button>
+    </form>
+</div>

@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { FormsModule } from '@angular/forms';
+import { VaccinationNotifierFormComponent } from './vaccination-notifier-form/vaccination-notifier-form.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     ContactUsComponent,
     ComingSoonComponent,
+    VaccinationNotifierFormComponent,
   ],
   imports: [
     BrowserModule,
