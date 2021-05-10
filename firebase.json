@@ -1,7 +1,7 @@
 {
   "hosting": {
     "site": "sakhavaccine",
-    "public": "dist/untitled",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
