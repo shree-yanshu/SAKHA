@@ -13,13 +13,13 @@
 }
   
 .formbox h3 {
-      border: 2px solid rgb(9, 234, 250);
+      border: 2px solid rgb(9, 73, 250);
       align-items: center;
       color: white;
       width: fit-content;
-      padding:  0.2rem 0.5rem 0.2rem 0.5rem; 
+      padding:  0.2rem 1.5rem; 
       display: flex;
-      border-radius: 1.5rem;
+      border-radius: 20px;
       margin: 0 auto;
       text-decoration: none;
       font-size: large;
@@ -44,10 +44,10 @@
 button {
     align-items: center;
     border: 3px solid black;
-    background: linear-gradient(to right, rgb(161, 161, 236), blue);
+    background: linear-gradient(180deg, #ff8800, #ff5202);
     color: white;
     width: fit-content;
-    padding: 0.5rem;
+    padding: 5px 20px;
     display: flex;
     border-radius: 1.5rem;
     margin: 0 auto;
@@ -55,7 +55,7 @@ button {
     font-size: large;
     margin-bottom: 0.5rem;
     cursor: pointer;
-  }
+}
   
 input, select {
     width: 45%;

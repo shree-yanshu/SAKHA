@@ -1,3 +1,19 @@
+@keyframes hueRotation{
+  0%{
+    filter:hue-rotate(0deg);
+  }
+  25%{
+    filter:hue-rotate(90deg);
+  }
+  50%{
+    filter:hue-rotate(180deg);
+  }
+  75%{
+    filter:hue-rotate(270deg);
+  }
+}
+
+
 body {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
@@ -11,25 +27,25 @@ body {
   scroll-snap-align: start;
   position: relative;
 }
-
+.container{
+  background-color: white;
+}
+.backgroundImage{
+  animation: hueRotation 50s ease-in-out infinite;
+}
 .body1 {
   height: 100vh;
   width: 100%;
   margin-top: 8vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.651), rgba(117, 101, 101, 0.3)),
-    url(../../assets/Glow.png);
-  background-position: center;
-  background-size: cover;
   display: flex;
   justify-content: space-between;
-  background-attachment: fixed;
 }
 
 .body1 .content-left {
   z-index: 4;
   float: left;
   position: absolute;
-  top: 55%;
+  top: 30%;
   transform: translateY(-50%);
   width: 55%;
   height: auto;
@@ -39,13 +55,13 @@ body {
 }
 .body1 .content-left h1 {
   font-size: 3.5rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 300;
-  width: 40%; 
+  width: 40%;
 }
 .body1 .content-left p {
   font-size: 1.25rem;
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: "Didact Gothic", sans-serif;
   font-weight: 300;
   letter-spacing: 2px;
   margin-bottom: 1em;
@@ -57,7 +73,6 @@ body {
   width: 100%;
 }
 .body1 .content-left .button a {
- 
   padding: 5px;
 }
 
@@ -84,15 +99,15 @@ body {
 }
 .body2 .content h2 {
   text-align: center;
-  color:white;
+  color: white;
   font-size: 2rem;
-  font-weight:bold;
+  font-weight: bold;
 }
-.body2 .content p {
+.body2 .content{
   text-align: center;
   color: white;
-  font-size:medium;
-  font-family: 'Antic', sans-serif;
+  font-size: large;
+  font-family: "Antic", sans-serif;
   margin: 0;
 }
 
@@ -108,7 +123,7 @@ body {
 .module {
   background: rgba(2, 2, 2, 0.911);
   color: rgb(245, 245, 245);
-  padding: .25em .5em;
+  padding: 0.25em 0.5em;
   border-radius: 10px;
 }
 .body1 .content-left a {
@@ -137,6 +152,7 @@ body {
 span p {
   margin-left: -55px;
 }
+
 @-webkit-keyframes ani-mouse {
   0% {
     opacity: 1;
@@ -221,8 +237,7 @@ span p {
   opacity: 0.8;
   filter: alpha(opacity=80);
 }
-.scroll-btn .mouse 
-{
+.scroll-btn .mouse {
   position: relative;
   display: block;
   width: 35px;
@@ -249,19 +264,17 @@ span p {
   animation: ani-mouse 2.5s linear infinite;
 }
 
-.modal 
-{
+.modal {
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 5;
 }
 
-#submitted 
-{
+#submitted {
   background-color: #fff;
   color: #000;
   width: 50%;
@@ -272,15 +285,15 @@ span p {
   margin: 10% auto;
 }
 
-#submitted h3 
-{
+#submitted h3 {
   font-size: 2rem;
 }
 
-#submitted h3, #submitted p, #submitted button 
-{
+#submitted h3,
+#submitted p,
+#submitted button {
   margin: 0 auto;
-  width: fit-content;   
+  width: fit-content;
 }
 
 #submitted p {
@@ -303,150 +316,146 @@ button {
   cursor: pointer;
 }
 
-hr
-{
-  width:50%
+hr {
+  width: 50%;
+}
+.moveGradient{
+  transition: all 500ms ease-in-out;
+  background-size: 200% 200%;
+}
+.moveGradient:hover{
+  background-position: 100% 100%;
+}
+.infoText{
+  font-size:larger;
 }
 
-@media screen and (max-width: 750px) 
-{
-  .body1 .right-content .img1
-  {
+@media screen and (min-width:1300px) and (max-width:1400px){
+  .infoText{
+    font-size:18px;
+    margin: 0%;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .body1 .right-content .img1 {
     display: none;
   }
-  
-.body1 .content-left 
-{
-  position: absolute;
-  top: 52%;
-  width: 100%;
-  left: 50%;
-  text-align: center;
-  align-items: center;
-  transform:translate(-50%,-50%);
-  justify-content: center;
- padding-left: 0px;
-}
 
-hr
-{ 
-  display: inline-block;
-  width: 75%;
-}
+  .body1 .content-left {
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    left: 50%;
+    text-align: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    padding-left: 0px;
+  }
 
-.body1 .content-left h1 
-{
-  text-align: center;
-  width: 100%;
-}
+  hr {
+    display: inline-block;
+    width: 75%;
+  }
 
-.body1 .content-left p 
-{
-  padding: 0;
-  text-align: center;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .body1 .content-left h1 {
+    text-align: center;
+    width: 100%;
+  }
 
-.body1 .content-left .button 
-{
-  align-items: center;
-  width: 90%;
-  margin: 2em auto;
-  justify-content:center;
-  margin-bottom:1em;
-}
+  .body1 .content-left p {
+    padding: 0;
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.body1 .content-left .button a 
-{
-  padding: .3rem;
-  margin: 0rem;
-}
-}
- 
-@media screen and (max-width: 538px) 
-{  
-.body1 .content-left 
-{
-  position: absolute;
-  top: 52%;
-  width: 100%;
-  left: 50%;
-  text-align: center;
-  align-items: center;
-  transform:translate(-50%,-50%);
-  justify-content: center;
- padding-left: 0px;
-}
+  .body1 .content-left .button {
+    align-items: center;
+    width: 90%;
+    margin: 2em auto;
+    justify-content: center;
+    margin-bottom: 1em;
+  }
 
-hr
-{ 
-  display: inline-block;
-  width: 75%;
-}
-
-.body1 .content-left .button 
-{
-  align-items: center;
-  width: 100%;
-  margin: 0 auto;
-  justify-content:center;
-  margin-bottom:1em;
-}
-.body1 .content-left .button a 
-{
-  padding: .3rem;
-}
-
-}
-
-@media(max-width:400px) {
-  .module {
-    font-size:1rem;
+  .body1 .content-left .button a {
+    padding: 0.3rem;
+    margin: 0rem;
   }
 }
 
-@media screen and (max-width: 370px) 
-{
-  
-.body1 .content-left 
-{
-  position: absolute;
-  top: 55%;
-  width: 100%;
-  left: 50%;
-  text-align: center;
-  align-items: center;
-  transform:translate(-50%,-50%);
-  justify-content: center;
-  padding-left: 0px;
+@media screen and (max-width: 538px) {
+  .body1 .content-left {
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    left: 50%;
+    text-align: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    padding-left: 0px;
+  }
+
+  hr {
+    display: inline-block;
+    width: 75%;
+  }
+
+  .body1 .content-left .button {
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    margin-bottom: 1em;
+  }
+  .body1 .content-left .button a {
+    padding: 0.3rem;
+  }
 }
 
-hr
-{ 
-  display: inline-block;
-  width: 75%;
+@media (max-width: 400px) {
+  .module {
+    font-size: 1rem;
+  }
 }
 
-.body1 .content-left .button 
-{
-  align-items: center;
-  width: 100%;
-  margin: 0 auto;
-  justify-content:center;
-  margin-bottom:1em;
-}
+@media screen and (max-width: 370px) {
+  .body1 .content-left {
+    position: absolute;
+    top: 55%;
+    width: 100%;
+    left: 50%;
+    text-align: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    padding-left: 0px;
+  }
 
-.body1 .content-left .button a 
-{
-  padding: .3rem;
-  margin: 0rem;
-}
+  hr {
+    display: inline-block;
+    width: 75%;
+  }
 
+  .body1 .content-left .button {
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    margin-bottom: 1em;
+  }
+
+  .body1 .content-left .button a {
+    padding: 0.3rem;
+    margin: 0rem;
+  }
 }
 /* 750 */
-@media(max-width:760px) {
+@media (max-width: 760px) {
   body {
     scroll-snap-type: none;
   }
@@ -454,13 +463,13 @@ hr
   .scroll-btn {
     display: none;
   }
-  
+
   .footer {
     margin-top: 10em;
   }
 }
 
-@media(max-width:480px) {
+@media (max-width: 480px) {
   .body2 .content {
     top: 70%;
   }
@@ -470,7 +479,7 @@ hr
   }
 }
 
-@media(max-width:380px) {
+@media (max-width: 380px) {
   .body2 .content {
     top: 75%;
   }
@@ -480,12 +489,12 @@ hr
   }
 }
 
-@media(max-width: 767px) {
-    button {
-        max-width: none;
-    }
+@media (max-width: 767px) {
+  button {
+    max-width: none;
+  }
 
-    #submitted {
-        width: 90%;
-    }
+  #submitted {
+    width: 90%;
+  }
 }

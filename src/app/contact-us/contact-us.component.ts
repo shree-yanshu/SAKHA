@@ -35,7 +35,7 @@ export class ContactUsComponent implements OnInit {
 
   onBlur(e : Event) {
     let el : Element = e.target as Element;
-    let invalid : Boolean;
+    let invalid : Boolean=false;
 
     switch(el.getAttribute('name')) {
       case 'name':
@@ -61,15 +61,15 @@ export class ContactUsComponent implements OnInit {
       this.modal = false; // hide the modal on multiple submits
   
       var formData: any = new FormData();
-      formData.append("name", this.form.get("name").value);
-      formData.append("email", this.form.get("email").value);
-      formData.append("subject", this.form.get("subject").value);
-      formData.append("message", this.form.get("message").value);
+      formData.append("name", this.form.get("name")!.value);
+      formData.append("email", this.form.get("email")!.value);
+      formData.append("subject", this.form.get("subject")!.value);
+      formData.append("message", this.form.get("message")!.value);
       
       this.isLoading = true; // sending the post request async so it's in progress
       
       this.http.post("https://script.google.com/macros/s/AKfycbxZWoUDKJo3zoIR5-bRJ2QKNghAyhobYE4-LbEAP4dqGHovkOfiiSaLWuH3wME3SEKg/exec", formData).subscribe(
-        (response) => {
+        (response:any) => {
           // choose the response message
           if (response["result"] == "success") {
             this.success = true;

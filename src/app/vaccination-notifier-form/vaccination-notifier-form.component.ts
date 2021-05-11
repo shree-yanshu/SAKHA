@@ -41,7 +41,7 @@ export class VaccinationNotifierFormComponent implements OnInit {
 
   onBlurOrChange(e: Event) {
     let el: Element = e.target as Element;
-    let invalid: Boolean;
+    let invalid: Boolean=false;
 
     switch (el.getAttribute('name')) {
       case 'name':
@@ -73,21 +73,21 @@ export class VaccinationNotifierFormComponent implements OnInit {
       this.form.disable(); // disable the form if it's valid to disable multiple submissions
 
       var formData: any = new FormData();
-      formData.append("name", this.form.get("name").value);
-      formData.append("age", this.form.get("age").value);
-      formData.append("contact", this.form.get("contact").value);
-      formData.append("email", this.form.get("email").value);
-      formData.append("state", this.form.get("state").value);
-      formData.append("city", this.form.get("city").value);
-      formData.append("pincode", this.form.get("pincode").value);
-      formData.append("locality", this.form.get("locality").value);
+      formData.append("name", this.form.get("name")!.value);
+      formData.append("age", this.form.get("age")!.value);
+      formData.append("contact", this.form.get("contact")!.value);
+      formData.append("email", this.form.get("email")!.value);
+      formData.append("state", this.form.get("state")!.value);
+      formData.append("city", this.form.get("city")!.value);
+      formData.append("pincode", this.form.get("pincode")!.value);
+      formData.append("locality", this.form.get("locality")!.value);
       formData.append("v_status", this.v_status);
 
       this.isLoading = true; // sending the post request async so it's in progress
       this.home.modal = false; // hide the modal on multiple submits
 
       this.http.post("https://script.google.com/macros/s/AKfycbyM9rbwXyXbjUTkbhlBG3ODFvMEdsXEGcJKRCkDjF7T5R1-uwOU5TauintvEMXpm4sO/exec", formData).subscribe(
-        (response) => {
+        (response:any) => {
           // choose the response message
           if (response["result"] == "success") {
             this.home.success = true;
@@ -929,8 +929,10 @@ selectedState : any = "";
 selectedCity : any = "";
 dropdownCity: any = [];
 
-populateCity(e : Event, value) {
-  this.dropdownCity = this.City.filter(i => i.state == value);
+populateCity(e : Event) {
+  let option = e.target as HTMLInputElement;
+  // console.log(option.value)
+  this.dropdownCity = this.City.filter((i: { state: any; }) => i.state == option.value);
   this.onBlurOrChange(e);
 }
 }

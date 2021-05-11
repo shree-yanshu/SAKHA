@@ -18,7 +18,7 @@
         </div>
         <div class="wrapbox">
             <select [formControl]="state" name="state" required (blur)="onBlurOrChange($event)"
-                [(ngModel)]="selectedState" (change)="populateCity($event, $event.target.value)">
+                [(ngModel)]="selectedState" (change)="populateCity($event)">
                 <option value="" selected>Select State</option>
                 <option *ngFor="let s of State" [value]="s.id">{{s.name}}</option>
             </select>

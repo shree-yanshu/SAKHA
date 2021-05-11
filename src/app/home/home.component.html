@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html>
-
+<html style="background-color:#231313">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,96 +9,88 @@
   <link href="https://fonts.googleapis.com/css2?family=Antic&family=Raleway:wght@100&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <app-header></app-header>
+<body uk-scrollspy="cls: uk-animation-fade; delay: 800; repeat: true">
+  <app-header ></app-header>
   <div class="container">
+    <img src="assets/Glow.png" class="uk-cover backgroundImage" style="width: 100vw;height: 120vh;object-fit: cover;">
     <section id="sec1" class="child body1">
-      <div class="content-left">
+      <div class="content-left" uk-scrollspy="cls: uk-animation-slide-bottom; delay: 800; repeat: false">
         <h1 style="color: white">
           SAKHA
         </h1>
-        <hr/>
+        <hr style="display:inline-block;"/>
         <P style="color: white">An initiative from a group of young entrepreneurs to control the chaos of COVID and help everyone in taking care of their friends & family.
-          <!-- <span style="font-weight: 900">
-            </span><br /><span style="
-                font: Poppins;
-                color: rgb(255, 174, 0);
-                font-size: xx-large;
-              "><br />
-            <span style="color: rgb(243, 115, 10)">FRIENDS</span> &
-            <span>FAMILY</span></span></P> -->
         <div class="button">
           <a href="#sec2">
-            <div class="module-border-wrap" style="
-                  background: linear-gradient(
+            <div class="module-border-wrap moveGradient" style="
+                  background-image: linear-gradient(
                     to right,
                     rgb(248, 120, 60),
                     rgb(88, 238, 120)
                   );
-                ">
+                " uk-scrollspy="cls: uk-animation-slide-bottom; delay: 850; repeat: false">
               <div class="module">Vaccination Notifier</div>
             </div>
           </a>
           <a href="./coming-soon">
-            <div class="module-border-wrap" style="
-                  background: linear-gradient(
+            <div class="module-border-wrap moveGradient" style="
+                  background-image: linear-gradient(
                     to right,
                     rgb(88, 238, 120),
                     rgba(0, 240, 255, 1)
                   );
-                ">
+                " uk-scrollspy="cls: uk-animation-slide-bottom; delay: 900; repeat: false">
               <div class="module">Request for oxygen</div>
             </div>
           </a>
           <a href="./coming-soon">
-            <div class="module-border-wrap" style="
-                  background: linear-gradient(
+            <div class="module-border-wrap moveGradient" style="
+                  background-image: linear-gradient(
                     to right,
                     rgb(0, 163, 255),
                     rgb(219, 75, 255)
                   );
-                ">
+                " uk-scrollspy="cls: uk-animation-slide-bottom; delay: 950; repeat: false">
               <div class="module">Seek Consultancy</div>
             </div>
           </a>
 
           <a href="./coming-soon">
-            <div class="module-border-wrap" style="
-                  background: linear-gradient(
+            <div class="module-border-wrap moveGradient" style="
+                  background-image: linear-gradient(
                     to right,
                     rgb(219, 75, 255),
                     rgb(199, 61, 36)
                   );
-                ">
+                " uk-scrollspy="cls: uk-animation-slide-bottom; delay: 1050; repeat: false">
               <div class="module">Register an Emergency</div>
             </div>
           </a>
           <a href="./coming-soon">
-            <div class="module-border-wrap" style="
-                  background: linear-gradient(
+            <div class="module-border-wrap moveGradient" style="
+                  background-image: linear-gradient(
                     to right,
                     rgb(199, 109, 36),
                     rgb(36, 185, 190)
                   );
-                ">
+                " uk-scrollspy="cls: uk-animation-slide-bottom; delay: 1100; repeat: false">
               <div class="module">Register</div>
             </div>
           </a>
           <a href="./coming-soon">
-            <div class="module-border-wrap" style="
-                  background: linear-gradient(
+            <div class="module-border-wrap moveGradient" style="
+                  background-image: linear-gradient(
                     to right,
                     rgb(10, 110, 240),
                     rgb(248, 120, 60)
                   );
-                ">
+                " uk-scrollspy="cls: uk-animation-slide-bottom; delay: 1150; repeat: false">
               <div class="module">Request for Medicine</div>
             </div>
           </a>
         </div>
       </div>
-
-      <div class="right-content">
+      <div class="right-content" uk-scrollspy="cls: uk-animation-fade; delay: 1500; repeat: false">
         <img class="img1" src="assets\Group 14.png" />
       </div>
       <span class="scroll-btn">
@@ -108,18 +99,19 @@
             <span> </span>
           </span>
         </a>
-        <p>scroll me</p>
+        <p>Scroll Me</p>
       </span>
     </section>
     <section id="sec2" class="child body2">
-      <div class="content">
+      <div class="content"uk-scrollspy="cls: uk-animation-fade; target: .infoText; delay: 500; repeat: false">
         <h2 style="font-family: 'Raleway', sans-serif;">SAKHA</h2>
-        <p>Register here to get automatically notified for vaccination from here, by filling the form ,Get notified by email whenever slots open up for 18 - 45 age group.</p>
-        <p>SMS support coming soon</p>
-        <p>Run by SWAYAMBHU INNOVATIONS</p>
-        <p>PS: Your data won't be shared or sold to anyone. Don't worry</p>
-        <p>Note: Given the high number of sign-ups, expect a delay of 24 - 48 hours to get your first email</p>
-        <app-vaccination-notifier-form></app-vaccination-notifier-form>
+        <p class="infoText" >Register here to get automatically notified for vaccination from here, by filling the form ,Get notified by email whenever slots open up for 18 - 45 age group.</p>
+        <p class="infoText">SMS support coming soon</p>
+        <p class="infoText">Run by SWAYAMBHU INNOVATIONS</p>
+        <p class="infoText">PS: Your data won't be shared or sold to anyone. Don't worry</p>
+        <p class="infoText">Note: Given the high number of sign-ups, expect a delay of 24 - 48 hours to get your first email</p>
+        <app-vaccination-notifier-form  uk-scrollspy="cls: uk-animation-slide-bottom; delay: 800; repeat: false"></app-vaccination-notifier-form>
+        <div class="sharethis-inline-share-buttons uk-align-center"></div>
       </div>
     </section>
     <div class="modal" style="display:{{modal ? 'block' : 'none'}};" (click)="modal=false">
@@ -127,7 +119,7 @@
         <h3 *ngIf="success">Response received!</h3>
         <p *ngIf="success">We will surely get back to you.</p>
         <h3 *ngIf="!success">Oops... An error occured</h3>
-        <p *ngIf="!success">Please try again in some while.</p>
+        <p *ngIf="!success">Please try again in a while.</p>
         <button (click)="modal=false">Okay</button>
       </div>
     </div>
