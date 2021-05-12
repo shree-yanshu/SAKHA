@@ -1,277 +1,67 @@
-*{
-    padding:0%;
-    margin:0%;
+@keyframes a {
+    from{
+        background-position: 100% 100%;
+    }
+    to{
+        background-position: 400% 400%;
+    }
 }
-body {
-    overflow-x: hidden;
-}
-#pic{
-    height:100vh;
-    width:100vw;
-}
-#heading{
-    font-size:150px ;
-    text-align: center;
-    margin-top:-27%;
-    padding-bottom:16%;
-    padding-right: 5%;
-    font:Julius Sans One;
-    margin-bottom: 1.5rem;
-    
-}
-.button{
-    margin-left:32%;
-    margin-top:-10%;
-    margin-bottom: 10%;
-}
-.module-border-wrap {
-    width:100px;
-    height:auto;
-    position: relative;
-    padding: 3px;
-    border-radius:10px;
-    border:2px solid black;
-}
-      
-.module {
-    width:100px;
-    height:auto;
-    color: white;
-    padding: 5px;
-    border-radius:10px;
-
-}
-@media (max-width:1024px) {
-    #heading{
-        font-size:125px ;
-        text-align: center;
-        margin-top:-65%;
-        padding-bottom:50%;
-        padding-right: 3%;
-        font:Julius Sans One;
-    }
-    .button{
-        margin-left:28%;
-        margin-top:-40%;
-        margin-bottom: 40%;
-    }
-    .module-border-wrap {
-        width:100px;
-        height:auto;
-        position: relative;
-        padding: 3px;
-        border-radius:10px;
-        border:2px solid black;
-    }
-          
-    .module {
-        width:100px;
-        height:auto;
-        color: white;
-        padding: 5px;
-        border-radius:10px;
-    
-    }
-    
-}
-@media (max-width:768px) {
-    #heading{
-        font-size:100px ;
-        text-align: center;
-        margin-top:-65%;
-        padding-bottom:38%;
-        padding-right: 5%;
-        font:Julius Sans One;
-    }
-    .button{
-        margin-left:25%;
-        margin-top:-25%;
-        margin-bottom: 30%;
-    }
-    .module-border-wrap {
-        width:100px;
-        height:auto;
-        position: relative;
-        padding: 3px;
-        border-radius:10px;
-        border:2px solid black;
-    }
-          
-    .module {
-        width:100px;
-        height:auto;
-        color: white;
-        padding: 5px;
-        border-radius:10px;
-    
-    }
-    
-}
-@media (max-width:768px) {
-    #heading{
-        font-size:75px ;
-        text-align: center;
-        margin-top:-75%;
-        padding-bottom:40%;
-        padding-right: 5%;
-        font:Julius Sans One;
-    }
-    .button{
-        margin-left:15%;
-        margin-top:-25%;
-        margin-bottom: 30%;
-    }
-    .module-border-wrap {
-        width:100px;
-        height:auto;
-        position: relative;
-        padding: 3px;
-        border-radius:10px;
-        border:2px solid black;
-    }
-          
-    .module {
-        width:100px;
-        height:auto;
-        color: white;
-        padding: 5px;
-        border-radius:10px;
-    
-    }
-    
+body,
+html {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
 }
 
-@media (max-width:500px) {
-    #heading{
-        font-size:55px ;
-        text-align: center;
-        margin-top:-100%;
-        padding-bottom:50%;
-        padding-right: 3%;
-        font:Julius Sans One;
-    }
-    .button{
-        margin-left:10%;
-        margin-top:-25%;
-        margin-bottom:30%;
-    }
-    .module-border-wrap {
-        width:100px;
-        height:auto;
-        position: relative;
-        padding: 3px;
-        border-radius:10px;
-        border:2px solid black;
-    }
-          
-    .module {
-        width:100px;
-        height:auto;
-        color: white;
-        padding: 5px;
-        border-radius:10px;
-    
-    }
-    
-}
-@media (max-width:375px) {
-    #heading{
-        font-size:45px ;
-        text-align: center;
-        margin-top:-100%;
-        padding-bottom:40%;
-        padding-right: 2%;
-        font:Julius Sans One;
-    }
-    .button{
-        margin-left:6%;
-        margin-top:-10%;
-        margin-bottom: 10%;
-    }
-    .module-border-wrap {
-        width:100px;
-        height:auto;
-        position: relative;
-        padding: 3px;
-        border-radius:10px;
-        border:2px solid black;
-    }
-          
-    .module {
-        width:100px;
-        height:auto;
-        color: white;
-        padding: 5px;
-        border-radius:10px;
-    
-    }
-    
-}
-@media (max-width:320px) {
-    #heading{
-        font-size:45px ;
-        text-align: center;
-        margin-top:-100%;
-        padding-bottom:40%;
-        padding-right: 2%;
-        font:Julius Sans One;
-    }
-    .button{
-        margin-left:1%;
-        margin-top:-10%;
-        margin-bottom: 10%;
-    }
-    .module-border-wrap {
-        width:100px;
-        height:auto;
-        position: relative;
-        padding: 3px;
-        border-radius:10px;
-        border:2px solid black;
-    }
-          
-    .module {
-        width:100px;
-        height:auto;
-        color: white;
-        padding: 5px;
-        border-radius:10px;
-    
-    }
-    
+.bgimg {
+  background-image: linear-gradient(180deg, #514A9D, #24C6DC,#514A9D);
+  height: 100%;
+  background-size: 400% 400%;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+  animation: a 50s infinite;
 }
 
-@media (max-width:285px) {
-    #heading{
-        font-size:30px ;
-        text-align: center;
-        margin-top:-130%;
-        padding-bottom:70%;
-        padding-right: 1%;
-        font:Julius Sans One;
-    }
-    .button{
-        margin-left:0%;
-        margin-top:-50%;
-        margin-bottom: 10%;
-    }
-    .module-border-wrap {
-        width:80px;
-        height:auto;
-        position: relative;
-        padding: 1px;
-        border-radius:10px;
-        border:2px solid black;
-    }
-          
-    .module {
-        width:80px;
-        height:auto;
-        color: white;
-        padding: 5px;
-        border-radius:10px;
-    
-    }
-    
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
 
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+h1 {
+  color: white;
+}
+hr {
+  margin: auto;
+  width: 40%;
+}
+button {
+  border: none;
+  text-decoration: none;
+  background-color: aliceblue;
+  color: black;
+  height: 45px;
+  width: 120px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-size: large;
+  transition: box-shadow 1s ease-in-out;
+}
+button:hover {
+  box-shadow: 5px 20px 50px rgba(0, 0, 0, 0.671);
 }

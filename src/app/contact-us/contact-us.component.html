@@ -1,32 +1,45 @@
 <body uk-scrollspy="cls: uk-animation-fade; delay: 0; repeat: false">
-    <app-header></app-header>
-    <h2 uk-scrollspy="cls:uk-animation-slide-bottom; delay:800">Contact Us</h2>
-    <div id="content-wrapper">
-        <div id="text-wrapper">
+    <div class="mainBackground">
+        <app-header></app-header>
+        <h2 uk-scrollspy="cls:uk-animation-slide-bottom; delay:800">Contact Us</h2>
+        <div id="content-wrapper">
+            <div id="text-wrapper">
                 <h3 uk-scrollspy="cls:uk-animation-slide-bottom; delay:900">About Us</h3>
-                <p uk-scrollspy="cls:uk-animation-slide-bottom; delay:1100">Sakha is an initiative from a group of young entrapreneurs to control the chaos of COVID and help everyone in need to take care of their friends and family.</p>
-                <p uk-scrollspy="cls:uk-animation-slide-bottom; delay:1100">We are a startup run by a group of young and innovative student entrepreneurs, and we specialize in developing cloud based cross platform personalized organization management and monitoring platforms using A.I/ML and automation to provide a leverage point to our clients in terms of their client reach and business management.</p>
+                <p uk-scrollspy="cls:uk-animation-slide-bottom; delay:1100">Sakha is an initiative from a group of young
+                    entrapreneurs to control the chaos of COVID and help everyone in need to take care of their friends
+                    and family.</p>
+                <p uk-scrollspy="cls:uk-animation-slide-bottom; delay:1100">We are a startup run by a group of young and
+                    innovative student entrepreneurs, and we specialize in developing cloud based cross platform
+                    personalized organization management and monitoring platforms using A.I/ML and automation to provide
+                    a leverage point to our clients in terms of their client reach and business management.</p>
+            </div>
+            <div id="form-wrapper">
+                <h3 uk-scrollspy="cls:uk-animation-slide-bottom; delay:900">Send us a message!</h3>
+                <form [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
+                    <input uk-scrollspy="cls:uk-animation-slide-bottom; delay:1000" [formControl]="name" type="text"
+                        name="name" placeholder="Name" (blur)="onBlur($event)" required>
+                    <input uk-scrollspy="cls:uk-animation-slide-bottom; delay:1100" [formControl]="email" type="email"
+                        name="email" placeholder="Email" (blur)="onBlur($event)" required>
+                    <input uk-scrollspy="cls:uk-animation-slide-bottom; delay:1200" [formControl]="subject" type="text"
+                        name="subject" placeholder="Subject" (blur)="onBlur($event)" required>
+                    <textarea uk-scrollspy="cls:uk-animation-slide-bottom; delay:1300" [formControl]="message"
+                        name="message" placeholder="Message" (blur)="onBlur($event)" required></textarea>
+                    <button uk-scrollspy="cls:uk-animation-slide-bottom; delay:1400" type="submit"
+                        [disabled]="isLoading && !form.valid"
+                        [ngClass]="isLoading || !form.valid ? 'disabled' : ''">Send Message</button>
+                </form>
+            </div>
         </div>
-        <div id="form-wrapper">
-            <h3 uk-scrollspy="cls:uk-animation-slide-bottom; delay:900">Send us a message!</h3>
-            <form [formGroup]="form" method="post" (ngSubmit) = "onSubmit()">
-                <input uk-scrollspy="cls:uk-animation-slide-bottom; delay:1000" [formControl]="name" type="text" name="name" placeholder="Name" (blur)="onBlur($event)" required>
-                <input uk-scrollspy="cls:uk-animation-slide-bottom; delay:1100" [formControl]="email" type="email" name="email" placeholder="Email" (blur)="onBlur($event)" required>
-                <input uk-scrollspy="cls:uk-animation-slide-bottom; delay:1200" [formControl]="subject" type="text" name="subject" placeholder="Subject" (blur)="onBlur($event)" required>
-                <textarea uk-scrollspy="cls:uk-animation-slide-bottom; delay:1300" [formControl]="message" name="message" placeholder="Message" (blur)="onBlur($event)" required></textarea>
-                <button uk-scrollspy="cls:uk-animation-slide-bottom; delay:1400" type="submit" [disabled]="isLoading && !form.valid" [ngClass]="isLoading || !form.valid ? 'disabled' : ''">Send Message</button>
-            </form>
+        <div class="sharethis-inline-share-buttons uk-align-center" style="margin-bottom: 30px;"></div>
+        <div class="modal" style="display:{{modal ? 'block' : 'none'}};" (click)="modal=false">
+            <div id="submitted" (click)="$event.stopPropagation()">
+                <h3 *ngIf="success">Message received!</h3>
+                <p *ngIf="success">We will surely get back to you.</p>
+                <h3 *ngIf="!success">Oops... An error occured</h3>
+                <p *ngIf="!success">Please try again in some while.</p>
+                <button (click)="modal=false">Okay</button>
+            </div>
         </div>
+        <app-footer></app-footer>
     </div>
-    <div class="sharethis-inline-share-buttons uk-align-center"></div>
-    <div class="modal" style="display:{{modal ? 'block' : 'none'}};" (click)="modal=false">
-        <div id="submitted" (click)="$event.stopPropagation()">
-            <h3 *ngIf="success">Message received!</h3>
-            <p *ngIf="success">We will surely get back to you.</p>
-            <h3 *ngIf="!success">Oops... An error occured</h3>
-            <p *ngIf="!success">Please try again in some while.</p>
-            <button (click)="modal=false">Okay</button>
-        </div>
-    </div>
-    <app-footer></app-footer>
 </body>

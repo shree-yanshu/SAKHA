@@ -5,3 +5,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 #st_gdpr_iframe{
     display:none !important;
 }
+.st-label .st-shares{
+    color:white !important;
+}

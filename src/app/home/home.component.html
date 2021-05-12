@@ -12,8 +12,7 @@
 <body uk-scrollspy="cls: uk-animation-fade; delay: 800; repeat: true">
   <app-header ></app-header>
   <div class="container">
-    <img src="assets/Glow.png" class="uk-cover backgroundImage" style="width: 100vw;height: 120vh;object-fit: cover;">
-    <section id="sec1" class="child body1">
+    <section id="sec1" class="child body1 mainBackground" style="height: 100vh;">
       <div class="content-left" uk-scrollspy="cls: uk-animation-slide-bottom; delay: 800; repeat: false">
         <h1 style="color: white">
           SAKHA
@@ -28,7 +27,7 @@
                     rgb(248, 120, 60),
                     rgb(88, 238, 120)
                   );
-                " uk-scrollspy="cls: uk-animation-slide-bottom; delay: 850; repeat: false">
+                ">
               <div class="module">Vaccination Notifier</div>
             </div>
           </a>
@@ -39,7 +38,7 @@
                     rgb(88, 238, 120),
                     rgba(0, 240, 255, 1)
                   );
-                " uk-scrollspy="cls: uk-animation-slide-bottom; delay: 900; repeat: false">
+                ">
               <div class="module">Request for oxygen</div>
             </div>
           </a>
@@ -50,7 +49,7 @@
                     rgb(0, 163, 255),
                     rgb(219, 75, 255)
                   );
-                " uk-scrollspy="cls: uk-animation-slide-bottom; delay: 950; repeat: false">
+                ">
               <div class="module">Seek Consultancy</div>
             </div>
           </a>
@@ -62,7 +61,7 @@
                     rgb(219, 75, 255),
                     rgb(199, 61, 36)
                   );
-                " uk-scrollspy="cls: uk-animation-slide-bottom; delay: 1050; repeat: false">
+                ">
               <div class="module">Register an Emergency</div>
             </div>
           </a>
@@ -73,7 +72,7 @@
                     rgb(199, 109, 36),
                     rgb(36, 185, 190)
                   );
-                " uk-scrollspy="cls: uk-animation-slide-bottom; delay: 1100; repeat: false">
+                ">
               <div class="module">Register</div>
             </div>
           </a>
@@ -84,7 +83,7 @@
                     rgb(10, 110, 240),
                     rgb(248, 120, 60)
                   );
-                " uk-scrollspy="cls: uk-animation-slide-bottom; delay: 1150; repeat: false">
+                ">
               <div class="module">Request for Medicine</div>
             </div>
           </a>
@@ -93,7 +92,7 @@
       <div class="right-content" uk-scrollspy="cls: uk-animation-fade; delay: 1500; repeat: false">
         <img class="img1" src="assets\Group 14.png" />
       </div>
-      <span class="scroll-btn">
+      <span class="scroll-btn" *ngIf="!mobileView">
         <a href="#sec2">
           <span class="mouse">
             <span> </span>
@@ -103,15 +102,12 @@
       </span>
     </section>
     <section id="sec2" class="child body2">
-      <div class="content"uk-scrollspy="cls: uk-animation-fade; target: .infoText; delay: 500; repeat: false">
+      <div class="content body2Dev" uk-scrollspy="cls: uk-animation-fade; target: .infoText; delay: 500; repeat: false">
         <h2 style="font-family: 'Raleway', sans-serif;">SAKHA</h2>
-        <p class="infoText" >Register here to get automatically notified for vaccination from here, by filling the form ,Get notified by email whenever slots open up for 18 - 45 age group.</p>
-        <p class="infoText">SMS support coming soon</p>
-        <p class="infoText">Run by SWAYAMBHU INNOVATIONS</p>
+        <p class="infoText" >Register here to get automatically notified for vaccination from here, by filling the form.<br>Get notified by email whenever slots open up for 18 - 45 age group.</p>
         <p class="infoText">PS: Your data won't be shared or sold to anyone. Don't worry</p>
         <p class="infoText">Note: Given the high number of sign-ups, expect a delay of 24 - 48 hours to get your first email</p>
         <app-vaccination-notifier-form  uk-scrollspy="cls: uk-animation-slide-bottom; delay: 800; repeat: false"></app-vaccination-notifier-form>
-        <div class="sharethis-inline-share-buttons uk-align-center"></div>
       </div>
     </section>
     <div class="modal" style="display:{{modal ? 'block' : 'none'}};" (click)="modal=false">

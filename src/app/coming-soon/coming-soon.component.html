@@ -1,24 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    </head>
-    
-    <body>
-        <app-header></app-header>
-        <div ><img src="assets/gradient-art-abstract-4k-z7-1920x1080.jpg" id="pic"></div>        <br>
-        <div><h1 id="heading">COMING SOON</h1></div>
-        <div class="button uk-flex">
-        <a href="./">
-            <div class="module-border-wrap" style="background: linear-gradient(to right, rgb(245, 105, 191),rgb(108, 98, 245));padding-left: 50%;">
-                <div class="module">HOME</div></div></a>
-                <div style="padding-left:20%;"></div>
-        <a href="./contact-us">
-            <div class="module-border-wrap" style="background: linear-gradient(to right, rgb(245, 105, 191),rgb(108, 98, 245));padding-left: 20%;padding-right:20%;">
-                <div class="module">CONTACT US</div></div></a>
-        </div>
-        <app-footer></app-footer>
-    </body>
-</html>
 
+<body uk-scrollspy="cls: uk-animation-fade; delay: 800; repeat: true">
+
+<div class="bgimg">
+  <app-header></app-header>
+  <div class="middle">
+    <h1 uk-scrollspy="cls: uk-animation-slide-bottom; delay: 1200; repeat: false">COMING SOON</h1>
+    <hr>
+    <p uk-scrollspy="cls: uk-animation-slide-bottom; delay: 1200; repeat: false" id="demo" style="font-size:30px"></p>
+    <a href="." name="home"><button uk-scrollspy="cls: uk-animation-slide-bottom; delay: 1200; repeat: false">Home</button></a>
+  </div>
+</div>
+<app-footer></app-footer>
+</body>
+</html>

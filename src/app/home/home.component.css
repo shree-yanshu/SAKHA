@@ -30,8 +30,12 @@ body {
 .container{
   background-color: white;
 }
-.backgroundImage{
-  animation: hueRotation 50s ease-in-out infinite;
+.mainBackground{
+  background-image: url("../../assets/Glow.png");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .body1 {
   height: 100vh;
@@ -79,12 +83,13 @@ body {
 /* BODY 2 CSS */
 
 .body2 {
-  height: 95vh;
+  height: 100vh;
   width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 1), rgba(75, 60, 60, 0)),
     url(../../assets/TransparentNoGlow.png);
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .body2 .content {
@@ -319,15 +324,11 @@ button {
 hr {
   width: 50%;
 }
-.moveGradient{
-  transition: all 500ms ease-in-out;
-  background-size: 200% 200%;
-}
-.moveGradient:hover{
-  background-position: 100% 100%;
-}
+
 .infoText{
   font-size:larger;
+  margin-bottom: 5px !important;
+  margin-top: 0% !important;
 }
 
 @media screen and (min-width:1300px) and (max-width:1400px){
@@ -387,114 +388,38 @@ hr {
   }
 }
 
-@media screen and (max-width: 538px) {
-  .body1 .content-left {
-    position: absolute;
-    top: 52%;
-    width: 100%;
-    left: 50%;
+@media screen and (min-width:300px) and (max-width:500px){
+  .content-left{
+    left:0% !important;
+    top:20% !important;
+  }
+  .module{
+    font-size:15px !important;
+  } 
+  .home{
     text-align: center;
-    align-items: center;
-    transform: translate(-50%, -50%);
-    justify-content: center;
-    padding-left: 0px;
   }
-
-  hr {
-    display: inline-block;
-    width: 75%;
+  .mainBackground{
+    background:url("../../assets/BackgroundMobileDark.png");
+    background-position: top;
+    background-size:cover;
+    background-repeat: no-repeat;
   }
-
-  .body1 .content-left .button {
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
-    justify-content: center;
-    margin-bottom: 1em;
+  .body2{
+    background:url("../../assets/BackgroundMobileLight.png");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
   }
-  .body1 .content-left .button a {
-    padding: 0.3rem;
+  .infoText{
+    font-size:15px !important;
+    margin-bottom: 0%;
+    margin-top: 0%;
   }
-}
-
-@media (max-width: 400px) {
-  .module {
-    font-size: 1rem;
+  .body2Dev{
+    top:55vh !important;
   }
-}
-
-@media screen and (max-width: 370px) {
-  .body1 .content-left {
-    position: absolute;
-    top: 55%;
-    width: 100%;
-    left: 50%;
-    text-align: center;
-    align-items: center;
-    transform: translate(-50%, -50%);
-    justify-content: center;
-    padding-left: 0px;
-  }
-
-  hr {
-    display: inline-block;
-    width: 75%;
-  }
-
-  .body1 .content-left .button {
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
-    justify-content: center;
-    margin-bottom: 1em;
-  }
-
-  .body1 .content-left .button a {
-    padding: 0.3rem;
-    margin: 0rem;
-  }
-}
-/* 750 */
-@media (max-width: 760px) {
-  body {
-    scroll-snap-type: none;
-  }
-
-  .scroll-btn {
-    display: none;
-  }
-
-  .footer {
-    margin-top: 10em;
-  }
-}
-
-@media (max-width: 480px) {
-  .body2 .content {
-    top: 70%;
-  }
-
-  .footer {
-    margin-top: 12.5em;
-  }
-}
-
-@media (max-width: 380px) {
-  .body2 .content {
-    top: 75%;
-  }
-
-  .footer {
-    margin-top: 15em;
-  }
-}
-
-@media (max-width: 767px) {
-  button {
-    max-width: none;
-  }
-
-  #submitted {
-    width: 90%;
+  .body2Dev>h1{
+    margin-bottom: 10px;
   }
 }

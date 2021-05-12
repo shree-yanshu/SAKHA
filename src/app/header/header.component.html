@@ -1,10 +1,26 @@
 <link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet'>
 <div class="header">
-    <ul>
-        <li style="margin-left:1vw;"><a href="https://swayambhu.tech/"><img src="assets/Tilak no back.png" alt="logo"></a></li>
+    <div *ngIf="mobileView" class="uk-flex uk-width-1-1">
+        <div style="float:right;">
+            <a href="./"><img src="assets/Layer 2.png" class="uk-align-center jaitraLogo" alt="grow"></a>
+        </div>
+        <div uk-toggle="target: #offcanvas-nav-primary" class="fi fi-nav-icon navIcon"></div>
+    </div>
+    <ul *ngIf="!mobileView">
+        <li style="margin-left:1vw;" class="swayambhuLogo"><a href="https://swayambhu.tech/"><img src="assets/Tilak no back.png" alt="logo"></a></li>
         <li id="link" style="font-family:Parisienne;"><a href="./contact-us">Contact Us</a></li>
         <li><a href="./"><img src="assets/Layer 2.png" alt="grow"></a></li>
         <li id="link" style="font-family:Parisienne;"><a href="https://swayambhu.tech/">Visit Swayambhu</a></li>
-        <li style="padding-right:3vw;"><a href="https://swayambhu.tech/"><img src="assets/Tilak no back.png" alt="logo"></a></li>
+        <li style="padding-right:3vw;" class="swayambhuLogo"><a href="https://swayambhu.tech/"><img src="assets/Tilak no back.png" alt="logo"></a></li>
     </ul>
+    <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+            <li id="link" style="font-family:Parisienne;list-style: none;"><a style="font-size: x-large;" href="./contact-us">Contact Us</a></li>
+            <li id="link" style="font-family:Parisienne;list-style: none;"><a style="font-size: x-large;" href="https://swayambhu.tech/">Visit Swayambhu</a></li>
+            <hr class="uk-divider-icon">
+        </div>
+
+    </div>
+    
 </div> 
